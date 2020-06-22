@@ -1,0 +1,140 @@
+<template>
+    <div class="wrapper" ref='aaa'>
+        <ul>
+            <li>test1100</li>
+            <li>test2100</li>
+            <li>test3100</li>
+            <li>test4100</li>
+            <li>test5100</li>
+            <li>test6100</li>
+            <li>test7100</li>
+            <li>test8100</li>
+            <li>test9100</li>
+            <li>test10100</li>
+            <li>test11100</li>
+            <li>test12100</li>
+            <li>test13100</li>
+            <li>test14100</li>
+            <li>test15100</li>
+            <li>test16100</li>
+            <li>test17100</li>
+            <li>test18100</li>
+            <li>test19100</li>
+            <li>test20100</li>
+            <li>test21100</li>
+            <li>test22100</li>
+            <li>test23100</li>
+            <li>test24100</li>
+            <li>test25100</li>
+            <li>test26100</li>
+            <li>test27100</li>
+            <li>test28100</li>
+            <li>test29100</li>
+            <li>test30100</li>
+            <li>test31100</li>
+            <li>test32100</li>
+            <li>test33100</li>
+            <li>test34100</li>
+            <li>test35100</li>
+            <li>test36100</li>
+            <li>test37100</li>
+            <li>test38100</li>
+            <li>test39100</li>
+            <li>test40100</li>
+            <li>test41100</li>
+            <li>test42100</li>
+            <li>test43100</li>
+            <li>test44100</li>
+            <li>test45100</li>
+            <li>test46100</li>
+            <li>test47100</li>
+            <li>test48100</li>
+            <li>test49100</li>
+            <li>test50100</li>
+            <li>test51100</li>
+            <li>test52100</li>
+            <li>test53100</li>
+            <li>test54100</li>
+            <li>test55100</li>
+            <li>test56100</li>
+            <li>test57100</li>
+            <li>test58100</li>
+            <li>test59100</li>
+            <li>test60100</li>
+            <li>test61100</li>
+            <li>test62100</li>
+            <li>test63100</li>
+            <li>test64100</li>
+            <li>test65100</li>
+            <li>test66100</li>
+            <li>test67100</li>
+            <li>test68100</li>
+            <li>test69100</li>
+            <li>test70100</li>
+            <li>test71100</li>
+            <li>test72100</li>
+            <li>test73100</li>
+            <li>test74100</li>
+            <li>test75100</li>
+            <li>test76100</li>
+            <li>test77100</li>
+            <li>test78100</li>
+            <li>test79100</li>
+            <li>test80100</li>
+            <li>test81100</li>
+            <li>test82100</li>
+            <li>test83100</li>
+            <li>test84100</li>
+            <li>test85100</li>
+            <li>test86100</li>
+            <li>test87100</li>
+            <li>test88100</li>
+            <li>test89100</li>
+            <li>test90100</li>
+            <li>test91100</li>
+            <li>test92100</li>
+            <li>test93100</li>
+            <li>test94100</li>
+            <li>test95100</li>
+            <li>test96100</li>
+            <li>test97100</li>
+            <li>test98100</li>
+            <li>test99100</li>
+            <li>test100100</li>
+        </ul>
+    </div>
+</template>
+<script>
+import BScroll from 'better-scroll'
+export default {
+    
+    name:'Category',
+    data(){
+        return {
+            scroll:null
+        }
+    },
+    mounted(){
+       console.log(this.$refs.aaa)
+       this.scroll= new BScroll(document.querySelector('.wrapper'),{
+           probeType:3,
+           click:true,
+           pullUpLoad:true
+        })
+        this.scroll.on('scroll',(position)=>{
+            // console.log(position)
+        })
+        this.scroll.on('pullingUp',()=>{
+            console.log('上拉加载更多')
+            this.scroll.finishPullUp()
+        })
+    }
+}
+</script>
+<style scoped>
+    .wrapper{
+        height: 150px;
+        background-color: pink;
+    }
+     
+</style>
